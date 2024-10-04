@@ -6,6 +6,7 @@ import { Archive, CircleDollarSign, Clipboard, Layout, LucideIcon, Menu, Sliders
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import Image from "next/image";
 
 interface SidebarLinkProps {
   href: string;
@@ -71,7 +72,13 @@ const Sidebar = () => {
           isSidebarCollapsed ? "px-5" : "px-8"
         }`}
       >
-      
+        <Image
+              src="https://s3-inventorymanagement-01.s3.ap-southeast-1.amazonaws.com/logo.png"
+              alt="netshere-logo"
+              width={27}
+              height={27}
+              className="rounded w-8"
+            />
         <h1
           className={`${
             isSidebarCollapsed ? "hidden" : "block"
